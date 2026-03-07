@@ -609,7 +609,7 @@
         </div>
         <div class="sender-info">
           <div class="sender-name">À Contretemps — L'univers Rétro Chic</div>
-          <div class="sender-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3754585943565443775654585943455243525a4744195145">[email&#160;protected]</a></div>
+          <div class="sender-email">contact@acontretemps.fr</div>
           <div class="email-to" id="emailTo"></div>
         </div>
         <div class="email-date" id="emailDate"></div>
@@ -720,7 +720,7 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const TOTAL_STEPS = 8;
 let currentStep = 0;
 const answers = {};
@@ -839,4 +839,15 @@ function restart() {
   document.getElementById('userEmail').value = '';
   document.getElementById('emailResult').classList.remove('visible');
   document.getElementById('formSection').style.display = 'block';
-  document.querySelectorAll('.step').forE
+  document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+  document.querySelector('.step[data-step="0"]').classList.add('active');
+  initProgress();
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+// Init
+initProgress();
+</script>
+
+</body>
+</html>
